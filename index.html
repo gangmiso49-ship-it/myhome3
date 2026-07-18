@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="브런치 카페 Hearth - 힘든 하루, 편안한 온기를 품은 공간에서 갓 구운 브런치와 따뜻한 커피로 여유로운 휴식을 즐기세요.">
+  <meta name="keywords" content="Hearth, 하스, 브런치 카페, 서울 브런치, 감성 카페, 안식처, 커피, 디저트">
+  <meta property="og:title" content="브런치 카페 Hearth">
+  <meta property="og:description" content="힘든 하루, 편안한 곳이 기다립니다. Hearth 카페에서 아늑하게 하루를 끝내세요.">
+  <meta property="og:image" content="images/hero-banner1.png">
+  <meta property="og:type" content="website">
+  
+  <title>Hearth | 브런치 카페 & 안식처</title>
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Remix Icon (Minimal Line Icons) CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+  
+  <!-- Leaflet.js CSS (오픈소스 지도 라이브러리) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+</head>
+<body>
+
+  <!-- ==========================================
+     1. HEADER & GLOBAL NAVIGATION BAR
+     ========================================== -->
+  <header>
+    <div class="nav-container">
+      <!-- Logo Section -->
+      <div class="logo">
+        <a href="#hero">
+          <img src="images/logo.png" alt="Hearth Logo">
+          <span class="logo-text">Hearth</span>
+        </a>
+      </div>
+      
+      <!-- GNB Menu Links -->
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#hero" class="nav-link">Home</a></li>
+          <li><a href="#brand" class="nav-link">Brand</a></li>
+          <li><a href="#menu" class="nav-link">Menu</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li class="mobile-cta"><a href="#contact" class="btn btn-primary">문의하기</a></li>
+        </ul>
+      </nav>
+      
+      <!-- CTA Button for Desktop -->
+      <div class="nav-cta">
+        <a href="#contact" class="btn btn-primary">문의하기</a>
+      </div>
+      
+      <!-- Mobile Hamburger Button -->
+      <button class="hamburger" aria-label="메뉴 열기">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================
+     2. HERO SECTION (Main Visual Rolling Banner)
+     ========================================== -->
+  <section id="hero">
+    <div class="hero-slider">
+      <!-- 2 Images Rolling: background images styled in JS / CSS -->
+      <div class="slide active" style="background-image: url('images/hero-banner1.png');"></div>
+      <div class="slide" style="background-image: url('images/hero-banner2.png');"></div>
+    </div>
+    
+    <div class="hero-content">
+      <h1>힘든 하루,<br>편안한 곳이 기다립니다.</h1>
+      <p>Hearth 카페에서 편안하게 하루를 끝내세요. 따뜻한 온기가 당신을 맞이합니다.</p>
+      <div class="hero-buttons">
+        <a href="#menu" class="btn btn-primary">메뉴 보기</a>
+        <a href="#contact" class="btn btn-outline">찾아오시는 길</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+     3. BRAND STORY SECTION (About Hearth)
+     ========================================== -->
+  <section id="brand">
+    <div class="container">
+      <div class="brand-wrapper">
+        
+        <!-- Left Side: Brand Story & Values -->
+        <div class="brand-content reveal">
+          <div class="section-header" style="text-align: left; margin-bottom: 30px;">
+            <span class="section-subtitle">Our Philosophy</span>
+            <h2 class="section-title" style="display: block; padding-bottom: 10px; margin-bottom: 20px;">화로 곁의 따뜻한 온기</h2>
+          </div>
+          
+          <div class="brand-story">
+            <p>바쁜 일상과 도심의 소음 속에서, 우리는 잠시 멈추어 숨을 고를 수 있는 공간이 필요합니다. <strong>Hearth(하스)</strong>는 '벽난로, 화로'를 뜻하는 이름처럼, 모두에게 따뜻한 온기와 편안함을 전하는 안식처가 되고자 합니다.</p>
+            <p>이른 아침 문을 열고 향긋한 브레드를 구워내며, 신선한 로컬 재료로 정갈하게 차려낸 브런치와 갓 내린 커피로 방문하시는 모든 이들의 몸과 마음을 채워드립니다. 편하게 머물며 포근함을 느껴보세요.</p>
+          </div>
+          
+          <!-- Three Core Values -->
+          <div class="brand-values">
+            <div class="value-card">
+              <i class="ri-fire-line value-icon"></i>
+              <h3>Warm</h3>
+              <p>마음 깊숙이 따뜻해지는 공간과 환대</p>
+            </div>
+            <div class="value-card">
+              <i class="ri-home-heart-line value-icon"></i>
+              <h3>Cozy</h3>
+              <p>소중한 사람들과 나누는 아늑한 시간</p>
+            </div>
+            <div class="value-card">
+              <i class="ri-leaf-line value-icon"></i>
+              <h3>Comfortable</h3>
+              <p>몸과 눈이 피로하지 않은 편안한 쉼</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right Side: Graphic Frame with Character Badge -->
+        <div class="brand-image reveal" style="transition-delay: 0.2s;">
+          <div class="brand-image-container">
+            <!-- Brand Space Image (Using original hero-banner for brand space visual) -->
+            <img src="images/hero-banner.png" alt="Hearth Interior Space">
+          </div>
+          <!-- Floating Character Badge -->
+          <div class="character-badge">
+            <img src="images/character.png" alt="Hearth Cafe Character" title="마스코트 캐릭터">
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+     4. SIGNATURE MENU SECTION
+     ========================================== -->
+  <section id="menu">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Signature Menu</span>
+        <h2 class="section-title">정성으로 차린 브런치 & 커피</h2>
+      </div>
+      
+      <!-- Grid Layout of 3 Cards -->
+      <div class="menu-grid">
+        
+        <!-- Card 1: Avocado Tartine -->
+        <div class="menu-card reveal">
+          <div class="menu-img-wrap">
+            <img src="images/menu-1.png" alt="Avocado Tartine">
+            <span class="menu-tag">Brunch</span>
+          </div>
+          <div class="menu-info">
+            <div>
+              <div class="menu-title-row">
+                <h3>아보카도 타르틴</h3>
+                <span class="menu-price">14.0</span>
+              </div>
+              <p class="menu-desc">바삭하게 구운 호밀 사워도우 위에 으깬 아보카도와 수란, 페타 치즈, 신선한 루꼴라를 얹어 풍미 가득한 오픈 샌드위치</p>
+            </div>
+            <div class="menu-footer">
+              <span class="menu-badge organic">Organic</span>
+              <span class="menu-badge">Best</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Card 2: Hearth Latte -->
+        <div class="menu-card reveal" style="transition-delay: 0.15s;">
+          <div class="menu-img-wrap">
+            <img src="images/menu-2.png" alt="Hearth Signature Latte">
+            <span class="menu-tag">Signature Coffee</span>
+          </div>
+          <div class="menu-info">
+            <div>
+              <div class="menu-title-row">
+                <h3>하스 에스프레소 콘파냐</h3>
+                <span class="menu-price">6.5</span>
+              </div>
+              <p class="menu-desc">화로의 따뜻한 불꽃을 형상화한, 부드럽고 쫀쫀한 수제 아몬드 시나몬 크림을 듬뿍 얹은 에스프레소 기반 크림 커피</p>
+            </div>
+            <div class="menu-footer">
+              <span class="menu-badge">Nutty</span>
+              <span class="menu-badge">Signature</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Card 3: Vanilla Pear Galette -->
+        <div class="menu-card reveal" style="transition-delay: 0.3s;">
+          <div class="menu-img-wrap">
+            <img src="images/menu-3.png" alt="Vanilla Pear Galette">
+            <span class="menu-tag">Dessert</span>
+          </div>
+          <div class="menu-info">
+            <div>
+              <div class="menu-title-row">
+                <h3>바닐라 페어 갈레트</h3>
+                <span class="menu-price">8.5</span>
+              </div>
+              <p class="menu-desc">바삭한 페이스트리 시트 속에 바닐라 빈 크림과 달콤하게 졸인 서양배를 가득 채워 화로 오븐에 은은하게 구워낸 프렌치 디저트</p>
+            </div>
+            <div class="menu-footer">
+              <span class="menu-badge">Sweet</span>
+              <span class="menu-badge">Seasonal</span>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+     5. CUSTOMER REVIEWS (Testimonial Card UI)
+     ========================================== -->
+  <section id="reviews">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Testimonials</span>
+        <h2 class="section-title">따뜻한 동행들의 이야기</h2>
+      </div>
+      
+      <!-- 3 Review Cards -->
+      <div class="reviews-grid">
+        
+        <!-- Review 1 -->
+        <div class="review-card reveal">
+          <div class="stars">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+          </div>
+          <p class="review-text">"Hearth에 들어서는 순간 도심의 소음이 사라지고 따뜻한 조명과 나무 냄새가 마음을 차분하게 만들어 줘요. 아보카도 타르틴도 담백하고 훌륭한 맛이었습니다."</p>
+          <div class="review-author">
+            <div class="author-avatar">민</div>
+            <div class="author-info">
+              <h4>김*정 님</h4>
+              <span>네이버 예약 방문자</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Review 2 -->
+        <div class="review-card reveal" style="transition-delay: 0.15s;">
+          <div class="stars">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+          </div>
+          <p class="review-text">"매장 한편의 아늑한 인테리어와 벽난로 오브제 덕분에 분위기가 정말 좋아요. 특히 시그니처 에스프레소의 고소한 크림은 일주일 피로를 다 씻어내 줍니다."</p>
+          <div class="review-author">
+            <div class="author-avatar">훈</div>
+            <div class="author-info">
+              <h4>이*훈 님</h4>
+              <span>구글 맵스 리뷰어</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Review 3 -->
+        <div class="review-card reveal" style="transition-delay: 0.3s;">
+          <div class="stars">
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+            <i class="ri-star-fill"></i>
+          </div>
+          <p class="review-text">"혼자 주말 오후에 책 한 권 들고 찾아가기에 이보다 더 안성맞춤인 곳은 없을 것 같아요. 바닐라 페어 갈레트와 따뜻한 티의 궁합이 아주 사랑스러웠습니다."</p>
+          <div class="review-author">
+            <div class="author-avatar">S</div>
+            <div class="author-info">
+              <h4>Sarah K.</h4>
+              <span>인스타그램 해시태그 리뷰</span>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+     6. CONTACT & MAP (Leaflet.js Map)
+     ========================================== -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Find Us</span>
+        <h2 class="section-title">찾아오시는 길</h2>
+      </div>
+      
+      <div class="contact-wrapper">
+        
+        <!-- Left: Leaflet Map Container -->
+        <div class="map-container reveal">
+          <!-- Loading Geolocation Spinner -->
+          <div id="map-loader" class="map-loader">
+            <div class="spinner"></div>
+            <p style="font-family: 'Noto Sans KR', sans-serif; font-size: 0.9rem; color: #4A3B32;">현재 위치를 확인하고 지도를 그리는 중입니다...</p>
+          </div>
+          
+          <div id="map"></div>
+        </div>
+        
+        <!-- Right: Business Info Cards -->
+        <div class="contact-info reveal" style="transition-delay: 0.2s;">
+          <div class="info-card">
+            
+            <div class="info-list">
+              <!-- Item 1: Address -->
+              <div class="info-item">
+                <i class="ri-map-pin-line info-icon"></i>
+                <div class="info-text">
+                  <h3>주소</h3>
+                  <p>서울특별시 중구 명동길 74 (명동성당 인근 골목)</p>
+                </div>
+              </div>
+              
+              <!-- Item 2: Business Hours -->
+              <div class="info-item">
+                <i class="ri-time-line info-icon"></i>
+                <div class="info-text">
+                  <h3>영업 시간</h3>
+                  <p>매일 09:00 - 21:00 (Last Order 20:30)</p>
+                  <p style="color: #9E503C; font-size: 0.8rem; margin-top: 2px;">* 매주 월요일은 정기 휴무일입니다.</p>
+                </div>
+              </div>
+              
+              <!-- Item 3: Parking / Transit -->
+              <div class="info-item">
+                <i class="ri-car-line info-icon"></i>
+                <div class="info-text">
+                  <h3>주차 및 대중교통</h3>
+                  <p>지하철 명동역 10번 출구 도보 5분 / 을지로3가역 12번 출구 도보 7분</p>
+                  <p>인근 공영주차장 이용을 권장하며, 예약 방문 시 주차 문의 부탁드립니다.</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Quick Action Buttons -->
+            <div class="map-actions">
+              <!-- Kakao Map Route Link -->
+              <a href="https://map.kakao.com/link/to/Hearth카페,37.5663,126.9840" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                <i class="ri-map-2-line"></i> 카카오맵 길찾기
+              </a>
+              <!-- Naver Map Search Link -->
+              <a href="https://map.naver.com/v5/search/서울특별시 중구 명동길 74" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                <i class="ri-compass-3-line"></i> 네이버 지도
+              </a>
+            </div>
+            
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+     7. FOOTER
+     ========================================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        
+        <!-- Brand Intro -->
+        <div class="footer-brand">
+          <h2>Hearth</h2>
+          <p>따뜻한 화로 곁의 안식처. Hearth 브런치 카페에서 바쁜 일상 뒤 가벼운 쉼표를 찍어보세요.</p>
+        </div>
+        
+        <!-- Contact Details -->
+        <div class="footer-links">
+          <h3>Contact Info</h3>
+          <ul>
+            <li><span style="color: #E8E1D9;"><i class="ri-mail-line"></i> 이메일:</span> contact@hearthcafe.com</li>
+            <li><span style="color: #E8E1D9;"><i class="ri-phone-line"></i> 연락처:</span> 02-1234-5678</li>
+            <li><span style="color: #E8E1D9;"><i class="ri-map-pin-5-line"></i> 주소:</span> 서울특별시 중구 명동길 74</li>
+          </ul>
+        </div>
+        
+        <!-- Social Channels -->
+        <div class="footer-sns">
+          <h3>Follow Hearth</h3>
+          <div class="sns-icons">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="sns-icon" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="sns-icon" aria-label="Facebook"><i class="ri-facebook-box-line"></i></a>
+            <a href="mailto:contact@hearthcafe.com" class="sns-icon" aria-label="Email"><i class="ri-mail-send-line"></i></a>
+          </div>
+        </div>
+        
+      </div>
+      
+      <!-- Copyright Section -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 Hearth Cafe. All Rights Reserved. Designed by Antigravity.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+     8. JAVASCRIPT SCRIPTS
+     ========================================== -->
+  <!-- Leaflet.js (Must be loaded before script.js) -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  
+  <!-- Main Script -->
+  <script src="js/script.js"></script>
+</body>
+</html>
